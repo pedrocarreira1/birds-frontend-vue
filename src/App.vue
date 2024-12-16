@@ -1,26 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container d-flex align-items-center">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <ImagesDescription />
+      </div>
+      <div class="col-md-6">
+        <ImagesSlider />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import ImagesDescription from "@/components/ImagesDescription.vue";
+import ImagesSlider from "@/components/ImagesSlider.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ImagesDescription,
+    ImagesSlider
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  .container {
+    min-height: 100vh;
+    padding: 0;
+    max-width: 1400px;
+  }
 </style>
